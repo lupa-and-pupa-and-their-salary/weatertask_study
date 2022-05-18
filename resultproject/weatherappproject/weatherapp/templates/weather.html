@@ -15,9 +15,15 @@
 
 </head>
 
-<body>
-  <nav class="row" style="background: black; color: white;">
-    <h1 class="col-md-3 text-center">Погода в мире</h1>
+<body style="color: rgb(231, 231, 231) ; background-color: rgb(243, 243, 243);">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <nav class="row" style="background: linear-gradient(45deg, rgb(0, 97, 13), rgb(55, 224, 55));background-image: url(rain.png)  ; color: white; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;">
+    <h1 style="text-align: center">Погода за окном</h1>
+    <left>
+      <!--<span>
+        <img src="rain.png"  height="100" width="100" style=”padding: lefy 1px;20px;”>
+     </span> -->
+    </left>
   </nav>
   <br />
   <br />
@@ -35,20 +41,26 @@
   </center>
   <div class="row">
     {% if country_code and cor and temp and pressure and humidity %}
-    <div class="col-md-6 col-md-offset-3 " style='background:light-blue; font-size:medium ;'>
+    <div class="col-md-6 col-md-offset-3 " style='background:rgb(0, 173, 185); font-size:large;'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <h1 style='text-align: center; color:white;'><strong>{{city}}</strong></h1>
-      <h1 class='badge badge-primary' style='width=70px'>Код региона : </h1><span> {{country_code}}</span><hr>
-        <h1  class='badge badgle-info' style='width=200px'>Координаты :</h1><span> {{cor}}</span> <hr>
-        <h1  class='badge badgle-primary' style='width=70px'>Температура воздуха : </h1><span> {{temp}}</span><hr>
-        <h1 class='badge badgle-primary' style='width=70px'>Давление :  </h1><span> {{pressure}}</span><hr>
-        <h1 class='badge badgle-primary' style='width=70px'>Влажность : </h1> <span> {{humidity}} </span><hr>
-        <h1 class='badge badgle-primary' style='width=70px'>Погода : </h1> <span> {{main}}</span><hr>
-        <h1 class='badge badgle-primary' style='width=70px'>Описание : </h1> <span> {{description}}</span> 
-        <img src='http://openweathermap.org/img/w/{{icon}}.png' alt='image' style='width:70px;'>
-       <spain> <h1 class='badge badgle-primary' style='width=70px'>Скорость ветра : </h1> <span> {{speed}}</span>   
+        <h1 class="badge badge-info">Ваш регион:</h1> {{country_code}}<hr>
+        <h1  class='badge badgle-info'>Координаты :</h1><span> {{cor}}</span> <hr>
+        <h1  class='badge badgle-primary' >Температура воздуха : </h1><span> {{temp}}</span><hr>
+        <h1 class='badge badgle-primary' >Атмосферное давление :  </h1><span> {{pressure}}</span><hr>
+        <h1 class='badge badgle-primary' >Влажность : </h1> <span> {{humidity}} </span><hr>
+        <h1 class='badge badgle-primary' >Погода : </h1> <span> {{main}}</span><hr>
+        <h1 class='badge badgle-dark' >Описание : </h1> <span> {{description}}</span> 
+        <span>
+          <img src="https://disk.yandex.ru/i/fPqm27gPv2yviQ">
+       </span> alt='image' style='width:70px;'>
+       <spain> <h1 class='badge badgle-primary' >Скорость ветра : </h1> <span> {{speed}}</span>   
 </div>
     {% endif %}
   </div>
+  <footer style="background: linear-gradient(45deg, rgb(0, 97, 13), rgb(55, 224, 55))">
+    <p>©2022 Artyom Trudkov</p>
+</footer>
 </body>
 
 </html>
